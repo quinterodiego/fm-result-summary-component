@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+  /* Primary */
+  --light-red: hsl(0, 100%, 67%);
+  --light-red-opacity: hsl(0, 100%, 97%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --orangey-yellow-opacity: hsl(39, 100%, 97%);
+  --green-teal: hsl(166, 100%, 37%);
+  --green-teal-opacity: hsl(166, 100%, 97%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+  --cobalt-blue-opacity: hsl(234, 85%, 97%);
+
+  /* Gradients */
+  --light-slate-blue: hsl(252, 100%, 67%); /* (background) */
+  --light-royal-blue: hsl(241, 81%, 54%); /* (background) */
+  --violet-blue: hsla(256, 72%, 46%, 1); /* (circle) */
+  --persian-blue: hsla(241, 72%, 46%, 0); /* (circle) */
+
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+body {
+  max-width: 1440px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--pale-blue);
+  margin: auto;
+}
+
+.card{
+  width: 736px;
+  height: 512px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 32px;
+  background-color: #fff;
+  flex-direction: row;
+}
+
+.your-result {
+  background: linear-gradient(180deg, hsl(252, 100%, 67%) 0, hsl(241, 81%, 54%) 100%);
+  border-radius: 32px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+}
+
+.title {
+  color: var(--light-lavender);
+  font-size: 26px;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, hsla(256, 72%, 46%, 1) 0, hsla(241, 72%, 46%, 0) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.seventy-six {
+  text-align: center;
+  color: #fff;
+  font-size: 72px;
+  font-weight: 800;
+}
+
+.of-100 {
+  font-size: 18px;
+  color: var(--light-lavender);
+  opacity: 0.51;
+  font-weight: 700;
+}
+
+.great {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.description {
+  margin-top: 10px;
+  color: var(--light-lavender);
+  text-align: center;
+}
+
+.summary {
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.summary-title {
+  color: var(--dark-gray-blue);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.list li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+.reaction {
+  background-color: var(--light-red-opacity);
+}
+
+.reaction p:nth-child(1) {
+  color: var(--light-red);
+  display: flex;
+}
+
+.memory {
+  background-color: var(--orangey-yellow-opacity);
+}
+
+.memory p:nth-child(1) {
+  color: var(--orangey-yellow);
+  display: flex;
+}
+
+.verbal {
+  background-color: var(--green-teal-opacity);
+}
+
+.verbal p:nth-child(1) {
+  color: var(--green-teal);
+  display: flex;
+}
+
+.visual {
+  background-color: var(--cobalt-blue-opacity);
+}
+
+.visual p:nth-child(1) {
+  color: var(--cobalt-blue);
+  display: flex;
+}
+
+.part-one {
+  color: var(--dark-gray-blue);
+  font-weight: 700;
+}
+
+.part-two {
+  color: var(--dark-gray-blue);
+  opacity: 0.5;
+}
+
+.list img {
+  margin-right: 10px;
+}
+
+button {
+  background-color: var(--dark-gray-blue);
+  color: #fff;
+  font-weight: 700;
+  width: 100%;
+  border-radius: 128px;
+  padding: 20px;
+  font-size: 18px;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+  background: linear-gradient(180deg, hsl(252, 100%, 67%) 0, hsl(241, 81%, 54%) 100%);
+}
+
+@media (max-width: 375px) {
+  .card {
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  .your-result {
+    border-radius: 0 0 32px 32px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .circle {
+    width: 140px;
+    height: 140px;
+  }
+
+  .seventy-six {
+    font-size: 56px;
+  }
+  
+  .of-100 {
+    font-size: 16px;
+  }
+  
+  .great {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .summary-title {
+    font-size: 18px;
+  }
+
+  .list p {
+    font-size: 16px;
+  }
+
+  button {
+    padding: 15px;
+  }
+
+  .card {
+    border-radius: 0;
+  }
+}
